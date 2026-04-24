@@ -1,0 +1,4 @@
+com\softstream\erp\model\TipoEmpresa.class
+com\softstream\erp\model\Empresa.class
+com\softstream\erp\repository\SchemaGeneration.class
+com\softstream\erp\model\RamoAtividade.class
