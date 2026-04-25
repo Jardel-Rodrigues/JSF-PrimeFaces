@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
 	
 <meta charset="UTF-8"/>
@@ -10,17 +11,44 @@
 
 </h:head>
 
-<body>
+<h:body>
 	<header>
     	<h:graphicImage library="softstream" name="logo.png"/>
 	</header>
 	
-	<h:outputText value="Olá!"/>
+	<div id="conteudo">
+		<h:form>
+			
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Razão Social:" for="razaoSocial"/>
+                <h:inputText id="razaoSocial"/>
+
+				<h:outputLabel value="Nome Fantasia:" for="nomeFantasia"/>
+				<h:inputText id="nomeFantasia"/>
+
+				<h:outputLabel value="Tipo Empresa:" for="tipo"/>
+				<h:selectOneMenu id="tipo" >
+					<f:selectItem itemValue="Selecione..." />
+					<f:selectItem itemValue="MEI" itemLabel="MEI" />
+                    <f:selectItem itemValue="LTDA" itemLabel="LTDA" />
+				</h:selectOneMenu>
+				
+				<h:outputLabel/>
+                <h:commandButton value="Salvar"/>
+			</h:panelGrid>
+			
+			<h:dataTabel>
+				
+			</h:dataTabel>
+			
+		</h:form>
+           		
+	</div>
 
 	<footer>
 		Curso Online "JSF e PrimeFaces Essencial"
 	</footer>
 	
-</body>
+</h:body>
 
 </html>
